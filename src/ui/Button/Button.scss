@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.button {
+  padding: $unit $unit * 4;
+  font-size: $fontSize;
+  color: $colorWhite;
+  border-radius: $unit * 2.5;
+  font-weight: 600;
+  transition: 0.1s ease;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../styles/variables";
+
+.add-new-contact {
+  &--button {
+    display: flex;
+    align-items: center;
+    background-color: $colorGenoa;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: $unit * 1;
+
+    &__icon-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $unit * 4.5;
+      height: $unit * 4.5;
+      border-radius: 50%;
+      background-color: $colorGenoa;
+    }
+
+    p {
+      line-height: 0;
+      text-transform: uppercase;
+      margin-left: $unit * 2;
+    }
+  }
+}

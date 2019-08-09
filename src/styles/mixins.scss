@@ -1,0 +1,13 @@
+@import'./variables';
+
+@mixin inputBorder {
+  border: 2px solid $colorBlack;
+}
+
+@mixin whiteBoxShadow {
+  box-shadow: 0 0 $defaultBoxShadowSize 0 rgba($colorWhite, 0.5);
+}
+
+@mixin blackBoxShadow {
+  box-shadow: 0 0 $defaultBoxShadowSize 0 rgba($colorBlack, 0.5);
+}

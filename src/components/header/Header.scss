@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.header {
+  background-color: #003333;
+  padding: 0 $unit * 5;
+  color: $colorWhite;
+  text-transform: uppercase;
+  display: flex;
+
+  &--input {
+    width: $unit * 27.5;
+    height: $unit * 5.5;
+    padding-left: $unit ;
+  }
+
+  .header__wrap {
+    flex-grow: 1;
+    padding: $unit * 4 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    &-content {
+      position: relative;
+    }
+
+    &-text {
+      font-size: xx-large;
+      font-weight: bold;
+    }
+
+    &-user {
+      position: absolute;
+      right: $unit * 4;
+      top: -$unit * 2;
+      height: 40%;
+      width: $unit * 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid white;
+      font-size: xx-small;
+    }
+  }
+}
+
+.dropdown-wrapper {
+  flex-grow: 3;
+  justify-content: flex-end;
+  align-items: flex-start;
+  display: flex;
+}

@@ -1,0 +1,117 @@
+@import "../../../styles/variables";
+
+$grid-template: repeat(5,  minmax(220px, 2fr)) minmax(120px, 1fr);
+
+.table {
+  background: white;
+  border-radius: $unit;
+  width: 100%;
+  margin-left: $unit * 3;
+  overflow-x: auto;
+  font-family: $defaultFont;
+
+  &--header {
+    display: grid;
+    grid-template-columns: $grid-template;
+
+    &-cell {
+      display: flex;
+      justify-content: space-between;
+      font-size: $fontTableSize;
+      font-weight: 600;
+      color: white;
+      padding: $unit * 3;
+
+      &-name {
+        background: #0584a6;
+        border-top-left-radius: $unit;
+        padding-left: $unit * 7.5;
+      }
+
+      &-surname {
+        background: #078db3;
+      }
+
+      &-city {
+        background: #0b96bd;
+      }
+
+      &-email {
+        background: $colorCerulean;
+      }
+
+      &-phone {
+        background: #0cb8d6;
+        justify-content: flex-end;
+      }
+
+      &-empty {
+        background: #0dc4db;
+        border-top-right-radius: $unit;
+      }
+
+      &__reverse {
+        flex-flow: row-reverse;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &--body {
+    &-row {
+      display: grid;
+      grid-template-columns: $grid-template;
+      width: 100%;
+
+      &:first-child {
+        border: 0;
+      }
+
+      &__selected {
+        .table--body-cell {
+          background: #e7f6fb;
+        }
+      }
+    }
+
+    &-cell {
+      display: flex;
+      border-top: 1px solid $colorSilver;
+      font-size: $fontSize;
+      padding: 0 $unit * 3;
+      min-height: $unit * 8;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+
+      &-name > span {
+        padding-left: $unit * 2;
+      }
+
+      &-phone {
+        justify-content: flex-end;
+      }
+
+      &-controls {
+        flex-grow: 1;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+.square-button {
+  width: $unit * 3.5;
+  height: $unit * 3.5;
+  border-radius: $unit;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+
+  &.active,
+  &:active,
+  &:hover {
+    color: $colorWhite;
+    background-color: #30B6C6;
+  }
+}

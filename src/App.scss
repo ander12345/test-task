@@ -1,0 +1,15 @@
+@import './styles/variables';
+
+.App {
+  text-align: center;
+  background: linear-gradient(to right bottom, #2e7f7e, $colorBlueLagoon, #005f7c, #004d76, #1c3b69);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// utility global classes
+
+.hide {
+  display: none !important;
+}

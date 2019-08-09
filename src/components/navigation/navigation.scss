@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid $colorCerulean;
+  border-radius: 30px;
+  background-color: $colorCerulean;
+  font-family: $defaultFont;
+  font-size: $fontSize;
+  font-weight: 600;
+
+  &--item {
+    flex-grow: 1;
+    padding: 10px 40px;
+
+    &:first-child {
+      border-radius: 30px 0 0 30px;
+    }
+
+    &:last-child {
+      border-radius: 0 30px 30px 0;
+    }
+
+    &:active {
+      background-color: $colorBlueLagoon;
+    }
+
+    &__selected {
+      background-color: $colorBlueLagoon;
+    }
+
+    &-link {
+      color: $colorWhite;
+      text-decoration: none;
+    }
+  }
+}
