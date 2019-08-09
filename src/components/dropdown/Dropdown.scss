@@ -1,0 +1,106 @@
+@import "../../styles/variables";
+
+.dropdown {
+  position: relative;
+  display: block;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  font-family: $defaultFont;
+  font-size: $fontSize;
+  outline: none;
+
+  &:focus .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-toggle {
+    outline: none;
+    background: $colorCerulean;
+    padding: $unit * 1.5;
+    color: white;
+    border-radius: 0 0 $unit $unit;
+
+    .text {
+      padding-left: $unit * 1.5;
+    }
+
+    .caret {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: $unit * 3;
+      vertical-align: middle;
+      border-top: 6px dashed;
+      border-top: 6px solid\9;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    outline: none;
+    top: $unit * 6;
+    background: $colorCerulean;
+    z-index: 1000;
+    padding: 0;
+    margin: $unit * 2 0 0;
+    font-size: $fontSizeSmall;
+    text-align: left;
+    list-style: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: $unit 0 $unit $unit;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+    &:before {
+      content: "";
+      position: absolute;
+      border: $unit * 1.25 solid transparent;
+      border-bottom-color: $colorCerulean;
+      right: $unit * 2.5;
+      top: -$unit * 2.5;
+      z-index: 2;
+    }
+
+    li {
+      cursor: pointer;
+      font-family: $defaultFont;
+      font-size: $fontSize;
+      transition: 0.1s ease;
+
+      &:first-child {
+        border-radius: $unit 0 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 $unit $unit;
+      }
+
+      .text {
+        padding-left: $unit * 1.5;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px groove rgba(128, 128, 128, 0.5);
+      }
+
+      &:hover {
+        background: #0a6b83;
+      }
+
+      & > a {
+        display: block;
+        clear: both;
+        color: $colorWhite;
+        white-space: nowrap;
+        text-transform: none;
+        text-decoration: none;
+        padding: $unit * 1.5;
+      }
+    }
+  }
+}

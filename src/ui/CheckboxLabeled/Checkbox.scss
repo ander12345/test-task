@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.cb-container {
+  margin-left: $unit * 3;
+  display: flex;
+  align-items: center;
+
+
+  .input {
+    width: 18px;
+    height: 18px;
+  }
+
+  .label {
+    color: $colorWhite;
+    font-size: $fontSize;
+    padding-left: 4px;
+  }
+
+  &.checkbox input[type="checkbox"] {
+    opacity: 0;
+  }
+
+  &.checkbox label {
+    position: relative;
+    display: inline-block;
+
+    padding-left: 22px;
+  }
+
+  &.checkbox label::before,
+  &.checkbox label::after {
+    position: absolute;
+    content: "";
+
+    display: inline-block;
+  }
+
+  &.checkbox label::before {
+    @include whiteBoxShadow;
+    @include inputBorder;
+    height: 18px;
+    width: 18px;
+    background: $colorEbb;
+    border-radius: $unit / 2;
+    left: -6px;
+    top: 2px;
+  }
+
+  &.checkbox label::after {
+    height: 5px;
+    width: 8px;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    color: $colorElm;
+    transform: rotate(-45deg);
+    left: 0px;
+    top: 7px;
+  }
+
+  &.checkbox input[type="checkbox"] + label::after {
+    content: none;
+  }
+
+  &.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+
+}

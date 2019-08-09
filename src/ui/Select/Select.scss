@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../Input/Input.scss";
+
+.select {
+  & &__control {
+    @extend .styled-input ;
+
+    &:hover {
+      border-color: $colorBlack;
+    }
+  }
+
+  .select-dropdown-indicator {
+    padding-right: $unit * 1.5!important;
+    color: $colorBlack;
+
+    &__rotate {
+      transform: rotate(180deg);
+      padding-left: $unit * 1.5!important;
+
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+}

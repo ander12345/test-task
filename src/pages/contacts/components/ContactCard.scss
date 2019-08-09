@@ -1,0 +1,54 @@
+@import "../../../styles/variables";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: $unit * 2;
+  background: white;
+  align-items: center;
+  border-radius: $unit;
+  font-family: $defaultFont;
+  font-size: 18px;
+  min-width: $unit * 42;
+
+  &--picture {
+    width: 250px;
+    border-radius: 100%;
+    border: $unit solid $colorAlto;
+  }
+
+  &--wrapper {
+    display: flex;
+    padding: $unit * 3 0;
+    width: 100%;
+  }
+
+  &--names {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-labelName {
+      color: gray;
+      padding: $unit 0;
+    }
+  }
+
+  &--values {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: $unit;
+
+    &-labelValue {
+      color: black;
+      padding: $unit 0;
+
+      a {
+        color: $colorLochinvar;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.styled-input {
+  @include whiteBoxShadow;
+  @include inputBorder;
+  font-size: $fontTableSize;
+  color: $colorBlack;
+  border-radius: $unit * 2.5;
+  background: $colorEbb;
+  outline: none;
+}
+
+.input {
+  position: relative;
+  display: inline-flex;
+  @extend .styled-input;
+
+  &--field {
+    @extend .styled-input;
+    width: 100%;
+    border: 0;
+
+    .input &__with-icon {
+      padding-right: $unit * 5;
+    }
+  }
+
+  &--action-block {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $unit * 5;
+    color: $colorCodGray;
+    background-color: $colorSilver;
+    border-radius: 0 $unit * 2.5 $unit * 2.5 0;
+  }
+}
+

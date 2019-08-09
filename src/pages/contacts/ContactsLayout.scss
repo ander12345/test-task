@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  &--topBar {
+    display: flex;
+    justify-content: space-between;
+    padding: $unit * 3 $unit * 5;
+  }
+
+  &--container {
+    padding: $unit * 3 $unit * 5;
+    display: flex;
+  }
+}
